@@ -19,6 +19,7 @@ npm i -g loopback-cli
 npm i -g electron
 npm i -g cordova 
 npm i -g ionic
+npm i -g vue
 
 // lints
 npm i -g jslint
