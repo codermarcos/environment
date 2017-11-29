@@ -6,7 +6,7 @@
       " *  @description {",
       " *  \t${1:description}",
       " *  }",
-      " *  @function ${TM_SELECTED_TEXT}",
+      " *  @function ${2:name}",
       " *  @param ${3|any,array,boolean,number,string,object|} [${4:param}] (${5:description})",
       " *  @return ${6|any,array,boolean,number,string,object|} (${7:description})",
       "**/"

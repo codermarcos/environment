@@ -1,8 +1,8 @@
 # environment
 Variables and extensions to my development environment.
 
-## vs code sync
-github token: 8500116c69944c9e3beb0e93bebdfe74 
+## vscode sync
+github gist: 71556684f71874c4f99c76f9794ebb94 
 
 ## node
 ```shell
