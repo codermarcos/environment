@@ -1,0 +1,254 @@
+{
+    "console.assert": {
+        "prefix": "cna",
+        "body": "console.assert(${1:expression}, ${2:object});"
+    },
+    "console.count": {
+      "prefix": "cnc",
+      "body": "console.count(${1:label});"
+    },
+    "console.group": {
+      "prefix": "cng",
+      "body": "console.group(\"${1:label}\");"
+    },
+    "console.groupEnd": {
+      "prefix": "cnge",
+      "body": "console.groupEnd();"
+    },
+    "console.trace": {
+      "prefix": "cnt",
+      "body": "console.trace(${1:object});"
+    },
+    "console.clear": {
+      "prefix": "cnc",
+      "body": "console.clear();"
+    },
+    "console.dir": {
+        "prefix": "cnd",
+        "body": "console.dir($1);"
+    },
+    "console.error": {
+        "prefix": "cne",
+        "body": "console.error($1);"
+    },
+    "console.info": {
+        "prefix": "cni",
+        "body": "console.info($1);"
+    },
+    "console.log": {
+        "prefix": "cnl",
+        "body": "console.log($1);"
+    },
+    "console.warn": {
+        "prefix": "cnw",
+        "body": "console.warn($1);"
+    },
+    "debugger": {
+        "prefix": "deb",
+        "body": "debugger;$1"
+    },
+    "addEventListener": {
+        "prefix": "ade",
+        "body": "${1:document}.addEventListener('${2:load}', (e) => {\n\t${3:// body}\n});"   
+    },
+    "appendChild": {
+        "prefix": "apc",
+        "body": "${1:document}.appendChild(${2:elem});"
+    },
+    "removeChild": {
+        "prefix": "rmc",
+        "body": "${1:document}.removeChild(${2:elem});"
+    },
+    "createElement": {
+        "prefix": "cel",
+        "body": "${1:document}.createElement(${2:elem});"
+    },
+    "createDocumentFragment": {
+        "prefix": "cdf",
+        "body": "${1:document}.createDocumentFragment();$2"
+    },
+    "classList.add": {
+        "prefix": "cla",
+        "body": "${1:document}.classList.add('${2:class}');"
+    },
+    "classList.toggle": {
+        "prefix": "clt",
+        "body": "${1:document}.classList.toggle('${2:class}');"
+    },
+    "classList.remove": {
+        "prefix": "clr",
+        "body": "${1:document}.classList.remove('${2:class}');"
+    },
+    "getElementById": {
+        "prefix": "gei",
+        "body": "${1:document}.getElementById('${2:id}');"
+    },
+    "getElementsByClassName": {
+        "prefix": "gec",
+        "body": "${1:document}.getElementsByClassName('${2:class}');"
+    },
+    "getElementsByTagName": {
+        "prefix": "get",
+        "body": "${1:document}.getElementsByTagName('${2:tag}');"
+    },
+    "getAttribute": {
+        "prefix": "gta",
+        "body": "${1:document}.getAttribute('${2:attr}');"
+    },
+    "setAttribute": {
+        "prefix": "sta",
+        "body": "${1:document}.setAttribute('${2:attr}', ${3:value});"
+    },
+    "removeAttribute": {
+        "prefix": "rma",
+        "body": "${1:document}.removeAttribute('${2:attr}');"
+    },
+    "innerHTML": {
+        "prefix": "inh",
+        "body": "${1:document}.innerHTML = '${2:elem}';"
+    },
+    "textContent": {
+        "prefix": "txc",
+        "body": "${1:document}.textContent = '${2:content}';"
+    },
+    "querySelector": {
+        "prefix": "qrs",
+        "body": "${1:document}.querySelector('${2:selector}');"
+    },
+    "querySelectorAll": {
+        "prefix": "qsa",
+        "body": "${1:document}.querySelectorAll('${2:selector}');"
+    },
+    "function": {
+        "prefix": "fun",
+        "body": "const ${1:methodName} = (${2:arguments}) => {\n\t${3:// body}\n}"
+    },
+    "function as a property of an object": {
+        "prefix": "ofu",
+        "body": "${1:functionName}: (${2:arguments}) => {\n\t${3:// body}\n}"
+    },
+    "anonymous function": {
+        "prefix": "afu",
+        "body": "(${1:arguments}) => {\n\t${2:// body}\n}"
+    },
+    "scoped function": {
+        "prefix": "sfu",
+        "body": "((${1:window}, ${2:document}) => {\n\t${3:// body}\n})(${1:window}, ${2:document});"
+    },
+    "prototype": {
+        "prefix": "prt",
+        "body": "${1:object}.prototype.${2:method} = (${3:arguments}) => {\n\t${4:// body}\n}"
+    },
+    "function call": {
+        "prefix": "call",
+        "body": "${1:method}.call(${2:context}, ${3:arguments});"
+    },
+    "function apply": {
+        "prefix": "apply",
+        "body": "${1:method}.apply(${2:context}, [${3:arguments}]);"
+    },
+    "JSON.parse": {
+        "prefix": "jsp",
+        "body": "JSON.parse(${1:object});"
+    },
+    "JSON.stringify": {
+        "prefix": "jss",
+        "body": "JSON.stringify(${1:object});"
+    },
+    "setInterval": {
+        "prefix": "sti",
+        "body": "setInterval(() => {\n\t${0:// body}\n}, ${1:1000});"
+    },
+    "setTimeout": {
+        "prefix": "sto",
+        "body": "setTimeout(() => {\n\t${0:// body}\n}, ${1:1000});"
+    },
+    "use strict": {
+        "prefix": "use",
+        "body": "'use strict';"
+    },
+    "alert": {
+        "prefix": "ale",
+        "body": "alert('${1:msg}');"
+    },
+    "confirm": {
+        "prefix": "con",
+        "body": "confirm('${1:msg}');"
+    },
+    "prompt": {
+        "prefix": "prm",
+        "body": "prompt('${1:msg}');"
+    },
+    "import": {
+      "prefix": "imp",
+      "body": "import ${2:moduleName} from '${1:module}';$0"
+    },
+    "import path": {
+      "prefix": "imn",
+      "body": "import '${1:module}';$0"
+    },
+    "import destructing": {
+      "prefix": "imd",
+      "body": "import { $2 } from '${1:module}';$0"
+    },
+    "import all": {
+      "prefix": "ima",
+      "body": "import * as ${2:alias} from '${1:module}';$0"
+    },
+    "import as": {
+      "prefix": "ima",
+      "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0"
+    },
+    "export function": {
+      "prefix": "exf",
+      "body": "export ${1:default} (${2:params}) =>  {\n\t$0\n};\n"
+    },
+    "export class": {
+      "prefix": "ecl",
+      "body": "export default class ${1:className} {\n\t$0\n};\n"
+    },
+    "extends": {
+      "prefix": "ece",
+      "body": " extends ${2:baseclassName} "
+    },
+    "constructor": {
+      "prefix": "con",
+      "body": "constructor(${1:params}) {\n\t${0}\n}"
+    },
+    "method": {
+      "prefix": "met",
+      "body": "${1:method}(${2:arguments}) {\n\t${2:// body}\n}"
+    },
+    "property get": {
+      "prefix": "pge",
+      "body": "get ${1:propertyName}() {\n\treturn this.${0:$1};\n}"
+    },
+    "property set": {
+      "prefix": "pse",
+      "body": "set ${1:propertyName}(${2:value}) {\n\t${0:body};\n}"
+    },
+    "for each": {
+        "prefix": "fore",
+        "body": "${1:array}.forEach((${2:element}) => {\n\t${3:// body}\n});"
+    },
+    "for of": {
+      "prefix": "forf",
+      "body": "for (${1|const|let|var|} ${1:element} of ${2:object}) {\n\t${0:// body}\n};"
+    },
+    "for in": {
+      "prefix": "fori",
+      "body": "for (${1|const|let|var|} ${1:element} in ${2:object}) {\n\t${0:// body}\n};"
+    },
+    "destructing object": {
+      "prefix": "dob",
+      "body": "const {${1:propertyName}} = ${2:objectToDestruct};"
+    },
+    "destructing array": {
+      "prefix": "dar",
+      "body": "const [${1:propertyName}] = ${2:arrayToDestruct};"
+    },
+    "promise": {
+      "prefix": "Prom",
+      "body": "return new Promise((res, rej) => {\n\t${1://body}\n});"
+    }
+  }
