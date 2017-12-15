@@ -2,7 +2,7 @@
 Variables and extensions to my development environment.
 
 ## vscode sync
-github gist: 71556684f71874c4f99c76f9794ebb94 
+github gist: a20565cf8a3513dd4769bebcf9946f9f 
 
 ## node
 ```shell

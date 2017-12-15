@@ -1,0 +1,10 @@
+{
+  "templete, script, style": {
+    "prefix": "tem",
+    "body": [
+      "<template>\n\t$6\n</template>",
+      "<script ${1:lang=\"ts\"}>\nexport default {\n\t$8\n}\n</script>",
+      "<style ${3:lang=${4|\"css\",\"sass\",\"scss\",\"stylus\",\"less\",\"postcss\"|}} ${5:scoped}>\n\t$7\n</style>"
+    ]
+  }
+}
