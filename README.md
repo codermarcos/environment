@@ -2,6 +2,7 @@
 Variables and extensions to my development environment.
 
 ## vscode sync
+github token: 1b65a8de12c09b8fc17b19dd134491ee40aad7b1
 github gist: a20565cf8a3513dd4769bebcf9946f9f 
 
 ## node
