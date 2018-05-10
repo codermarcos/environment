@@ -41,8 +41,3 @@ npm i -g sprity-scss
 npm i -g sprity
 ```
 
-## ruby
-```shell
-gem install sass
-gem install test-unit
-```
