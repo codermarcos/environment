@@ -4,13 +4,43 @@
     "body": [
       "/*",
       " *  @description {",
-      " *  \t${1:description}",
+      " *  ${1:description}",
       " *  }",
       " *  @function ${2:name}",
+      " * ",
       " *  @param ${3|any,array,boolean,number,string,object|} [${4:param}] (${5:description})",
+      " * ",
       " *  @return ${6|any,array,boolean,number,string,object|} (${7:description})",
       "**/"
     ]
+  },
+  "comment param": {
+    "prefix": "_cp",
+    "body": "@param ${3|any,array,boolean,number,string,object|} [${4:param}] (${5:description})"
+  },
+  "vue data method": {
+    "prefix": "data",
+    "body": ["data() {\n\treturn { $1 }\n},"]
+  },
+  "vue mounted method": {
+    "prefix": "moun",
+    "body": ["mounted() {\n\t${1:// Body}\n},"]
+  },
+  "vue node components": {
+    "prefix": "copo",
+    "body": ["components: {\n\t$1\n},"]
+  },
+  "vue node computed": {
+    "prefix": "copu",
+    "body": ["computed: {\n\t$1\n},"]
+  },
+  "vue node methods": {
+    "prefix": "meth",
+    "body": ["methods: {\n\t$1\n},"]
+  },
+  "vue node props": {
+    "prefix": "prop",
+    "body": ["props: ['$1'],"]
   },
   "console.assert": {
     "prefix": "cna",
@@ -135,7 +165,7 @@
   },
   "function": {
     "prefix": "fun",
-    "body": "${1|const,let,var|} ${2:methodName} = (${3:arguments}) => {\n\t${4:// body}\n}"
+    "body": "const ${1:methodName} = (${2:arguments}) => {\n\t${3:// body}\n}"
   },
   "function as a property of an object": {
     "prefix": "ofu",
@@ -224,7 +254,7 @@
     "body": "export default class ${1:className} {\n\t$0\n};\n"
   },
   "extends": {
-    "prefix": "ext",
+    "prefix": "ece",
     "body": " extends ${2:baseclassName} "
   },
   "constructor": {
@@ -250,23 +280,83 @@
   "for of": {
     "prefix": "forf",
     "body":
-      "for (${1|const,let,var|} ${1:element} of ${2:object}) {\n\t${0:// body}\n};"
+      "for (${1|const,let,var|} ${2:element} of ${3:object}) {\n\t${4:// body}\n};"
   },
   "for in": {
     "prefix": "fori",
     "body":
-      "for (${1|const,let,var|} ${1:element} in ${2:object}) {\n\t${0:// body}\n};"
+      "for (${1|const,let,var|} ${2:element} in ${3:object}) {\n\t${4:// body}\n};"
   },
   "destructing object": {
     "prefix": "dob",
-    "body": "${1|const,let,var|} {${2:propertyName}} = ${3:objectToDestruct};"
+    "body": "const {${1:propertyName}} = ${2:objectToDestruct};"
   },
   "destructing array": {
     "prefix": "dar",
-    "body": "${1|const,let,var|} [${2:propertyName}] = ${3:arrayToDestruct};"
+    "body": "const [${1:propertyName}] = ${2:arrayToDestruct};"
   },
   "promise": {
     "prefix": "Prom",
-    "body": "Promise((res, rej) => {\n\t${1://body}\n});"
+    "body": "return new Promise((res, rej) => {\n\t${1://body}\n});"
+  },
+  "mocha before": {
+    "prefix": "bef",
+    "body": "before(() => {\n\t${1}\n});"
+  },
+  "mocha before each": {
+    "prefix": "bee",
+    "body": "beforeEach(() => {\n\t${1}\n});"
+  },
+  "mocha after": {
+    "prefix": "aft",
+    "body": "after(() => {\n\t${1}\n});"
+  },
+  "mocha after each": {
+    "prefix": "afe",
+    "body": "afterEach(() => {\n\t${1}\n});"
+  },
+  "mocha describe and it": {
+    "prefix": "des",
+    "body": "describe('${1}', () => {\n\tit(\n\t\t'${2}',\n\t\t() => {${3}}\n\t);\n});"
+  },
+  "mocha describe": {
+    "prefix": "des",
+    "body": "describe('${1}', () => {${1});"
+  },
+  "mocha context and it": {
+    "prefix": "coi",
+    "body": "context('${1}', () => {\n\tit(\n\t\t'${2}',\n\t\t() => {${3}}\n\t);\n});"
+  },
+  "mocha context": {
+    "prefix": "con",
+    "body": "context('${1}', () => {${1});"
+  },
+  "mocha it": {
+    "prefix": "it",
+    "body": "it(\n\t'${1}',\n\t() => {${2}}\n);"
+  },
+  "mocha suite": {
+    "prefix": "sui",
+    "body": "suite(\n\t'${1}',\n\t() => {${2}}\n);"
+  },
+  "mocha suite setup": {
+    "prefix": "sus",
+    "body": "suiteSetup(\n\t() => {${1}}\n);"
+  },
+  "mocha setup": {
+    "prefix": "set",
+    "body": "setup(\n\t() => {${1}}\n);"
+  },
+  "mocha suiteTeardown": {
+    "prefix": "sut",
+    "body": "suiteTeardown(\n\t() => {${1}}\n);"
+  },
+  "mocha teardown": {
+    "prefix": "ter",
+    "body": "teardown(\n\t() => {${1}}\n);"
+  },
+  "mocha test": {
+    "prefix": "tes",
+    "body": "test(\n\t'${1}',\n\t\t() => {${2}}\n);"
   }
 }
