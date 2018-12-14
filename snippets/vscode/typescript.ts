@@ -1,0 +1,458 @@
+{
+	"comment method": {
+    "prefix": "_cm",
+    "body": [
+      "/*",
+      " *  @description {",
+      " *  ${1:description}",
+      " *  }",
+      " *  @function ${2:name}",
+      " * ",
+      " *  @param ${3|any,array,boolean,number,string,object|} [${4:param}] (${5:description})",
+      " * ",
+      " *  @return ${6|any,array,boolean,number,string,object|} (${7:description})",
+      "**/"
+    ]
+  },
+  "comment param": {
+    "prefix": "_cp",
+    "body": "@param ${3|any,array,boolean,number,string,object|} [${4:param}] (${5:description})"
+  },
+  "vue data method": {
+    "prefix": "data",
+    "body": ["data() {\n\treturn { $1 }\n},"]
+  },
+  "vue mounted method": {
+    "prefix": "moun",
+    "body": ["mounted() {\n\t${1:// Body}\n},"]
+  },
+  "vue node components": {
+    "prefix": "copo",
+    "body": ["components: {\n\t$1\n},"]
+  },
+  "vue node computed": {
+    "prefix": "copu",
+    "body": ["computed: {\n\t$1\n},"]
+  },
+  "vue node methods": {
+    "prefix": "meth",
+    "body": ["methods: {\n\t$1\n},"]
+  },
+  "vue node props": {
+    "prefix": "prop",
+    "body": ["props: ['$1'],"]
+  },
+  "console.assert": {
+    "prefix": "cna",
+    "body": "console.assert(${1:expression}, ${2:object});"
+  },
+  "console.count": {
+    "prefix": "cnc",
+    "body": "console.count(${1:label});"
+  },
+  "console.group": {
+    "prefix": "cng",
+    "body": "console.group(\"${1:label}\");"
+  },
+  "console.groupEnd": {
+    "prefix": "cnge",
+    "body": "console.groupEnd();"
+  },
+  "console.trace": {
+    "prefix": "cnt",
+    "body": "console.trace(${1:object});"
+  },
+  "console.clear": {
+    "prefix": "cnc",
+    "body": "console.clear();"
+  },
+  "console.dir": {
+    "prefix": "cnd",
+    "body": "console.dir($1);"
+  },
+  "console.error": {
+    "prefix": "cne",
+    "body": "console.error($1);"
+  },
+  "console.info": {
+    "prefix": "cni",
+    "body": "console.info($1);"
+  },
+  "console.log": {
+    "prefix": "cnl",
+    "body": "console.log($1);"
+  },
+  "console.warn": {
+    "prefix": "cnw",
+    "body": "console.warn($1);"
+  },
+  "debugger": {
+    "prefix": "deb",
+    "body": "debugger;$1"
+  },
+  "addEventListener": {
+    "prefix": "ade",
+    "body":
+      "${1:document}.addEventListener('${2:load}', (e) => {\n\t${3:// body}\n});"
+  },
+  "appendChild": {
+    "prefix": "apc",
+    "body": "${1:document}.appendChild(${2:elem});"
+  },
+  "removeChild": {
+    "prefix": "rmc",
+    "body": "${1:document}.removeChild(${2:elem});"
+  },
+  "createElement": {
+    "prefix": "cel",
+    "body": "${1:document}.createElement(${2:elem});"
+  },
+  "createDocumentFragment": {
+    "prefix": "cdf",
+    "body": "${1:document}.createDocumentFragment();$2"
+  },
+  "classList.add": {
+    "prefix": "cla",
+    "body": "${1:document}.classList.add('${2:class}');"
+  },
+  "classList.toggle": {
+    "prefix": "clt",
+    "body": "${1:document}.classList.toggle('${2:class}');"
+  },
+  "classList.remove": {
+    "prefix": "clr",
+    "body": "${1:document}.classList.remove('${2:class}');"
+  },
+  "getElementById": {
+    "prefix": "gei",
+    "body": "${1:document}.getElementById('${2:id}');"
+  },
+  "getElementsByClassName": {
+    "prefix": "gec",
+    "body": "${1:document}.getElementsByClassName('${2:class}');"
+  },
+  "getElementsByTagName": {
+    "prefix": "get",
+    "body": "${1:document}.getElementsByTagName('${2:tag}');"
+  },
+  "getAttribute": {
+    "prefix": "gta",
+    "body": "${1:document}.getAttribute('${2:attr}');"
+  },
+  "setAttribute": {
+    "prefix": "sta",
+    "body": "${1:document}.setAttribute('${2:attr}', ${3:value});"
+  },
+  "removeAttribute": {
+    "prefix": "rma",
+    "body": "${1:document}.removeAttribute('${2:attr}');"
+  },
+  "innerHTML": {
+    "prefix": "inh",
+    "body": "${1:document}.innerHTML = '${2:elem}';"
+  },
+  "textContent": {
+    "prefix": "txc",
+    "body": "${1:document}.textContent = '${2:content}';"
+  },
+  "querySelector": {
+    "prefix": "qrs",
+    "body": "${1:document}.querySelector('${2:selector}');"
+  },
+  "querySelectorAll": {
+    "prefix": "qsa",
+    "body": "${1:document}.querySelectorAll('${2:selector}');"
+  },
+  "function": {
+    "prefix": "fun",
+    "body": "const ${1:methodName} = (${2:arguments}) => {\n\t${3:// body}\n}"
+  },
+  "function as a property of an object": {
+    "prefix": "ofu",
+    "body": "${1:functionName}: (${2:arguments}) => {\n\t${3:// body}\n}"
+  },
+  "anonymous function": {
+    "prefix": "afu",
+    "body": "(${1:arguments}) => {\n\t${2:// body}\n}"
+  },
+  "scoped function": {
+    "prefix": "sfu",
+    "body":
+      "((${1:window}, ${2:document}) => {\n\t${3:// body}\n})(${1:window}, ${2:document});"
+  },
+  "prototype": {
+    "prefix": "prt",
+    "body":
+      "${1:object}.prototype.${2:method} = (${3:arguments}) => {\n\t${4:// body}\n}"
+  },
+  "function call": {
+    "prefix": "call",
+    "body": "${1:method}.call(${2:context}, ${3:arguments});"
+  },
+  "function apply": {
+    "prefix": "apply",
+    "body": "${1:method}.apply(${2:context}, [${3:arguments}]);"
+  },
+  "JSON.parse": {
+    "prefix": "jsp",
+    "body": "JSON.parse(${1:object});"
+  },
+  "JSON.stringify": {
+    "prefix": "jss",
+    "body": "JSON.stringify(${1:object});"
+  },
+  "setInterval": {
+    "prefix": "sti",
+    "body": "setInterval(() => {\n\t${0:// body}\n}, ${1:1000});"
+  },
+  "setTimeout": {
+    "prefix": "sto",
+    "body": "setTimeout(() => {\n\t${0:// body}\n}, ${1:1000});"
+  },
+  "use strict": {
+    "prefix": "use",
+    "body": "'use strict';"
+  },
+  "alert": {
+    "prefix": "ale",
+    "body": "alert('${1:msg}');"
+  },
+  "confirm": {
+    "prefix": "con",
+    "body": "confirm('${1:msg}');"
+  },
+  "prompt": {
+    "prefix": "prm",
+    "body": "prompt('${1:msg}');"
+  },
+  "import": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}';$0"
+  },
+  "import path": {
+    "prefix": "imn",
+    "body": "import '${1:module}';$0"
+  },
+  "import destructing": {
+    "prefix": "imd",
+    "body": "import { $2 } from '${1:module}';$0"
+  },
+  "import all": {
+    "prefix": "ima",
+    "body": "import * as ${2:alias} from '${1:module}';$0"
+  },
+  "import as": {
+    "prefix": "ima",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0"
+  },
+  "export function": {
+    "prefix": "exf",
+    "body": "export ${1:default} (${2:params}) =>  {\n\t$0\n};\n"
+  },
+  "export class": {
+    "prefix": "ecl",
+    "body": "export default class ${1:className} {\n\t$0\n};\n"
+  },
+  "extends": {
+    "prefix": "ece",
+    "body": " extends ${2:baseclassName} "
+  },
+  "constructor": {
+    "prefix": "con",
+    "body": "constructor(${1:params}) {\n\t${0}\n}"
+  },
+  "method": {
+    "prefix": "met",
+    "body": "${1:method}(${2:arguments}) {\n\t${2:// body}\n}"
+  },
+  "property get": {
+    "prefix": "pge",
+    "body": "get ${1:propertyName}() {\n\treturn this.${0:$1};\n}"
+  },
+  "property set": {
+    "prefix": "pse",
+    "body": "set ${1:propertyName}(${2:value}) {\n\t${0:body};\n}"
+  },
+  "for each": {
+    "prefix": "fore",
+    "body": "${1:array}.forEach((${2:element}) => {\n\t${3:// body}\n});"
+  },
+  "for of": {
+    "prefix": "forf",
+    "body":
+      "for (${1|const,let,var|} ${2:element} of ${3:object}) {\n\t${4:// body}\n};"
+  },
+  "for in": {
+    "prefix": "fori",
+    "body":
+      "for (${1|const,let,var|} ${2:element} in ${3:object}) {\n\t${4:// body}\n};"
+  },
+  "destructing object": {
+    "prefix": "dob",
+    "body": "const {${1:propertyName}} = ${2:objectToDestruct};"
+  },
+  "destructing array": {
+    "prefix": "dar",
+    "body": "const [${1:propertyName}] = ${2:arrayToDestruct};"
+  },
+  "promise": {
+    "prefix": "Prom",
+    "body": "return new Promise((res, rej) => {\n\t${1://body}\n});"
+  },
+  "mocha before": {
+    "prefix": "bef",
+    "body": "before(() => {\n\t${1}\n});"
+  },
+  "mocha before each": {
+    "prefix": "bee",
+    "body": "beforeEach(() => {\n\t${1}\n});"
+  },
+  "mocha after": {
+    "prefix": "aft",
+    "body": "after(() => {\n\t${1}\n});"
+  },
+  "mocha after each": {
+    "prefix": "afe",
+    "body": "afterEach(() => {\n\t${1}\n});"
+  },
+  "mocha describe and it": {
+    "prefix": "des",
+    "body": "describe('${1}', () => {\n\tit(\n\t\t'${2}',\n\t\t() => {${3}}\n\t);\n});"
+  },
+  "mocha describe": {
+    "prefix": "des",
+    "body": "describe('${1}', () => {${1});"
+  },
+  "mocha context and it": {
+    "prefix": "coi",
+    "body": "context('${1}', () => {\n\tit(\n\t\t'${2}',\n\t\t() => {${3}}\n\t);\n});"
+  },
+  "mocha context": {
+    "prefix": "con",
+    "body": "context('${1}', () => {${1});"
+  },
+  "mocha it": {
+    "prefix": "it",
+    "body": "it(\n\t'${1}',\n\t() => {${2}}\n);"
+  },
+  "mocha suite": {
+    "prefix": "sui",
+    "body": "suite(\n\t'${1}',\n\t() => {${2}}\n);"
+  },
+  "mocha suite setup": {
+    "prefix": "sus",
+    "body": "suiteSetup(\n\t() => {${1}}\n);"
+  },
+  "mocha setup": {
+    "prefix": "set",
+    "body": "setup(\n\t() => {${1}}\n);"
+  },
+  "mocha suiteTeardown": {
+    "prefix": "sut",
+    "body": "suiteTeardown(\n\t() => {${1}}\n);"
+  },
+  "mocha teardown": {
+    "prefix": "ter",
+    "body": "teardown(\n\t() => {${1}}\n);"
+  },
+  "mocha test": {
+    "prefix": "tes",
+    "body": "test(\n\t'${1}',\n\t\t() => {${2}}\n);"
+  },
+  "angular component": {
+    "prefix": "ngc",
+    "body": [
+      "import { Component, OnInit } from '@angular/core';",
+      "",
+      "@Component({",
+      "\tselector: '${1:selector-name}',",
+      "\ttemplate: '$0'",
+      "})",
+      "",
+      "export class ${3:Name}Component implements OnInit {",
+      "\tconstructor() { }",
+      "",
+      "\tngOnInit() { }",
+      "}"
+    ]
+  },
+  "angular service": {
+    "prefix": "ngs",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "",
+      "@Injectable()",
+      "export class ${1:Name}Service {",
+      "$0",
+      "\tconstructor() { }",
+      "}"
+    ]
+  },
+  "angular pipe": {
+    "prefix": "ngp",
+    "body": [
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({",
+      "\tname: '${1:selector-name}'",
+      "})",
+      "",
+      "export class ${2:Name}Pipe implements PipeTransform {",
+      "\ttransform(value: any, ...args: any[]): any {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  },
+  "angular output event": {
+    "prefix": "ngo",
+    "body": "@Output() ${1:eventName} = new EventEmitter<${2:eventType}>();"
+  },
+  "angular root module": {
+    "prefix": "ngm",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "import { BrowserModule  } from '@angular/platform-browser';",
+      "import { HttpModule } from '@angular/http';",
+      "",
+      "import { ${1:App}Component } from './${1:app}.component';",
+      "",
+      "@NgModule({",
+      "\timports: [",
+      "\t\tBrowserModule,",
+      "\t\tHttpModule,",
+      "\t],",
+      "\tdeclarations: [${1:App}Component]",
+      "})",
+      "export class ${1:App}Module { }",
+      "$0"
+    ]
+  },
+  "angular module with routing": {
+    "prefix": "ngr",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "import { Routes, RouterModule } from '@angular/router';",
+      "",
+      "const routes: Routes = [${0}]",
+      "",
+      "@NgModule({",
+      "\timports: [RouterModule.${2:forChild}(routes)],",
+      "\texports: [],",
+      "\tdeclarations: [],",
+      "})",
+      "export class ${1:Name}Module { }"
+    ]
+  },
+  "angular directive": {
+    "prefix": "ngd",
+    "body": [
+      "import { Directive } from '@angular/core';",
+      "",
+      "@Directive({ selector: '[${1:selector-name}]' })",
+      "export class ${2:Name}Directive {",
+      "\tconstructor() { }",
+      "}"
+    ]
+  }
+}
