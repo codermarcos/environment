@@ -253,6 +253,14 @@
     "prefix": "ecl",
     "body": "export default class ${1:className} {\n\t$0\n};\n"
   },
+  "const require": {
+    "prefix": "cre",
+    "body": "const $0 = require('${1:./}');"
+  },
+  "require": {
+    "prefix": "req",
+    "body": "const $0 = require('${1:./}');"
+  },
   "extends": {
     "prefix": "ece",
     "body": " extends ${2:baseclassName} "
