@@ -259,7 +259,7 @@
   },
   "require": {
     "prefix": "req",
-    "body": "const $0 = require('${1:./}');"
+    "body": "require('${0:./}');"
   },
   "extends": {
     "prefix": "ece",
