@@ -329,7 +329,7 @@
   },
   "mocha describe": {
     "prefix": "des",
-    "body": "describe('${1}', () => {${1});"
+    "body": "describe('${1}', () => {${2}});"
   },
   "mocha context and it": {
     "prefix": "coi",
@@ -337,7 +337,7 @@
   },
   "mocha context": {
     "prefix": "con",
-    "body": "context('${1}', () => {${1});"
+    "body": "context('${1}', () => {${2});"
   },
   "mocha it": {
     "prefix": "it",
