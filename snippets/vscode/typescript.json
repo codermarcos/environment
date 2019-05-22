@@ -1,5 +1,5 @@
 {
-	"comment method": {
+  "comment method": {
     "prefix": "_cm",
     "body": [
       "/*",
@@ -253,6 +253,14 @@
     "prefix": "ecl",
     "body": "export default class ${1:className} {\n\t$0\n};\n"
   },
+  "const require": {
+    "prefix": "cre",
+    "body": "const $0 = require('${1:./}');"
+  },
+  "require": {
+    "prefix": "req",
+    "body": "require('${0:./}');"
+  },
   "extends": {
     "prefix": "ece",
     "body": " extends ${2:baseclassName} "
@@ -317,11 +325,11 @@
   },
   "mocha describe and it": {
     "prefix": "des",
-    "body": "describe('${1}', () => {\n\tit(\n\t\t'${2}',\n\t\t() => {${3}}\n\t);\n});"
+    "body": "describe(\n\t'${1}',\n\t() => {\n\tit(\n\t\t'${2}',\n\t\t() => {${3}}\n\t);\n});"
   },
   "mocha describe": {
     "prefix": "des",
-    "body": "describe('${1}', () => {${2});"
+    "body": "describe(\n\t'${1}',\n\t() => {\t${2}\t});"
   },
   "mocha context and it": {
     "prefix": "coi",
@@ -358,7 +366,7 @@
   "mocha test": {
     "prefix": "tes",
     "body": "test(\n\t'${1}',\n\t\t() => {${2}}\n);"
-  },
+  },	  
   "angular component": {
     "prefix": "ngc",
     "body": [
